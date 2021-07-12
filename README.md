@@ -1,30 +1,30 @@
-# csvbox-react-test
+# csvbox
 
-> Made with create-react-library
-
-[![NPM](https://img.shields.io/npm/v/csvbox-react-test.svg)](https://www.npmjs.com/package/csvbox-react-test) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
-
-## Install
-
-```bash
-npm install --save csvbox-react-test
-```
+[![NPM](https://img.shields.io/npm/v/csvbox.svg)](https://www.npmjs.com/package/csvbox) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
 ## Usage
 
 ```jsx
-import React, { Component } from 'react'
 
-import MyComponent from 'csvbox-react-test'
-import 'csvbox-react-test/dist/index.css'
+import { CsvboxButton } from 'csvbox-react-test-2'
+import 'csvbox-react-test-2/dist/index.css'
 
-class Example extends Component {
-  render() {
-    return <MyComponent />
-  }
+const App = () => {
+  return (
+    <CsvboxButton
+      slug="Your sheet's slug here"
+      user={{ user_id: 'default123' }}
+      onData={(result, data) => {
+        // do something with the result and data
+        console.log(result, data);
+      }}
+    />
+  )
 }
+
+export default App
 ```
 
 ## License
 
-MIT © [aniketrane24](https://github.com/aniketrane24)
+MIT © [AniketRane](https://github.com/aniketrane24)
